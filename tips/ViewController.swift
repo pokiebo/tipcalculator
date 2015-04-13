@@ -132,10 +132,10 @@ class ViewController: UIViewController {
         NSLog("View did appear")
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        /*UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.tipLabel.constant += self.view.bounds.width
             self.view.layoutIfNeeded()
-            }, completion: nil)
+            }, completion: nil)*/
         //UIView.animateWithDuration(1.5,animations: { self.tipLabel.alpha = 1.0})
     
     }
