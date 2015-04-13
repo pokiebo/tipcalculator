@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  tips
 //
-//  Created by Dwipal Desai on 4/9/15.
+//  Created by Sudipta Bhowmik on 4/9/15.
 //  Copyright (c) 2015 codepath. All rights reserved.
 //
 
@@ -69,6 +69,8 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         NSLog("View will appear")
         
+        //Hide the tipSegment to prepare for animating in in viewDidAppear
+        self.tipSegment.hidden = true
         
         var defaults = NSUserDefaults.standardUserDefaults()
         var showLastBill = false
@@ -97,7 +99,6 @@ class ViewController: UIViewController {
                 billField.text = billStr
                 var tipSelectedSegment = defaults.integerForKey(MyVariables.lastTipKey)
                 tipSegment.selectedSegmentIndex = tipSelectedSegment
-                NSLog("REMEMBER")
             }
         } else {
             //Check if the default tip percent is previously saved
@@ -132,12 +133,15 @@ class ViewController: UIViewController {
         NSLog("View did appear")
         super.viewDidAppear(animated)
         
-        /*UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.tipLabel.constant += self.view.bounds.width
-            self.view.layoutIfNeeded()
-            }, completion: nil)*/
-        //UIView.animateWithDuration(1.5,animations: { self.tipLabel.alpha = 1.0})
-    
+        //Move the tipSegment towards the bottom of screen along the Y
+        self.tipSegment.frame = CGRectMake(self.tipSegment.frame.origin.x, 648, self.tipSegment.frame.size.width, self.tipSegment.frame.size.height)
+        
+        //Animate by moving upwards along Y
+        self.tipSegment.hidden = false
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.tipSegment.frame = CGRectMake(self.tipSegment.frame.origin.x, 348, self.tipSegment.frame.size.width, self.tipSegment.frame.size.height)
+            }, completion: nil)
     }
     
     override func viewDidLoad() {
