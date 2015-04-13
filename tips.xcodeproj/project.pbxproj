@@ -13,6 +13,7 @@
 		70B993661AD6F45D0090243B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B993651AD6F45D0090243B /* Images.xcassets */; };
 		70B993691AD6F45D0090243B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B993671AD6F45D0090243B /* LaunchScreen.xib */; };
 		70B993751AD6F45D0090243B /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B993741AD6F45D0090243B /* tipsTests.swift */; };
+		70B9937F1AD72F220090243B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9937E1AD72F220090243B /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		70B9936E1AD6F45D0090243B /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B993731AD6F45D0090243B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B993741AD6F45D0090243B /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		70B9937E1AD72F220090243B /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		70B9935B1AD6F45D0090243B /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				70B993801AD72F920090243B /* ViewControllers */,
 				70B9935E1AD6F45D0090243B /* AppDelegate.swift */,
 				70B993601AD6F45D0090243B /* ViewController.swift */,
 				70B993621AD6F45D0090243B /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				70B993731AD6F45D0090243B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70B993801AD72F920090243B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				70B9937E1AD72F220090243B /* UserViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B993611AD6F45D0090243B /* ViewController.swift in Sources */,
+				70B9937F1AD72F220090243B /* UserViewController.swift in Sources */,
 				70B9935F1AD6F45D0090243B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
